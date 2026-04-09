@@ -24,8 +24,8 @@ const projects = [
     thumbnail: "/project4.png",
     techStack: ["react", "node", "express"],
     gradient: "#51fbfb, rgb(13, 1, 60)",
-    github: "https://github.com/Ayushdas1904/Defai",
-    live: "https://defai-chi.vercel.app/",
+    github: "",
+    live: "",
   },
   {
     title: "ADfluence",
@@ -33,8 +33,8 @@ const projects = [
     thumbnail: "/project1.png",
     techStack: ["ts", "next", "mongo"],
     gradient: "#ff7e5f, #0b1020",
-    github: "https://github.com/Ayushdas1904/Adfluence",
-    live: "https://adfluence-eosin.vercel.app/",
+    github: "",
+    live: "",
   },
   {
     title: "FitBuddy",
@@ -42,8 +42,8 @@ const projects = [
     thumbnail: "/project2.png",
     techStack: ["ts", "node", "express", "mongo"],
     gradient: "#14f195, rgb(13, 1, 60)",
-    github: "https://github.com/Ayushdas1904/FitBuddy",
-    live: "https://fit-buddy-2004.vercel.app/",
+    github: "",
+    live: "",
   },
   {
     title: "Prolingo",
@@ -51,8 +51,8 @@ const projects = [
     thumbnail: "/project3.png",
     techStack: ["ts", "node", "postgres"],
     gradient: "#64e, rgb(13, 1, 60)",
-    github: "https://github.com/Ayushdas1904/Hack-5.0-ProLingo",
-    live: "https://prolingo-alpha.vercel.app/",
+    github: "",
+    live: "",
   },
   
 ];
