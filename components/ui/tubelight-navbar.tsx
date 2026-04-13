@@ -20,6 +20,7 @@ interface NavBarProps {
 export function NavBar({ items, className }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name);
   const [isMobile, setIsMobile] = useState(false);
+  const [isClickScrolling, setIsClickScrolling] = useState(false);
 
   // Track screen size
   useEffect(() => {
@@ -32,15 +33,25 @@ export function NavBar({ items, className }: NavBarProps) {
   // Track active section on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY + 120; // offset for navbar height
+      if (isClickScrolling) return;
 
-      // Deduplicate items by URL to avoid last-match issues
+      const scrollY = window.scrollY + 120;
+
+      // Check if at the bottom of the page
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+
+      // Deduplicate items by URL
       const seen = new Set<string>();
       const uniqueItems = items.filter(item => {
         if (seen.has(item.url)) return false;
         seen.add(item.url);
         return true;
       });
+
+      if (atBottom) {
+        setActiveTab(uniqueItems[uniqueItems.length - 1].name);
+        return;
+      }
 
       for (let i = uniqueItems.length - 1; i >= 0; i--) {
         const sectionId = uniqueItems[i].url.replace("#", "");
@@ -54,9 +65,9 @@ export function NavBar({ items, className }: NavBarProps) {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // initialize on load
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [items]);
+  }, [items, isClickScrolling]);
 
   return (
     <div
@@ -74,7 +85,11 @@ export function NavBar({ items, className }: NavBarProps) {
             <Link
               key={item.name}
               href={item.url}
-              onClick={() => setActiveTab(item.name)}
+              onClick={() => {
+                setActiveTab(item.name);
+                setIsClickScrolling(true);
+                setTimeout(() => setIsClickScrolling(false), 800);
+              }}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-foreground/80 hover:text-primary",

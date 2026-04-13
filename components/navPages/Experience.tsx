@@ -6,14 +6,14 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    title: "Your Job Title",
-    company: "Company Name",
-    location: "City, State",
-    date: "Month Year – Present",
+    title: "Software Engineer Intern",
+    company: "Sela",
+    location: "Remote",
+    date: "January 2026 – March 2026",
     bullets: [
-      "Describe what you did or accomplished",
-      "Another responsibility or achievement",
-      "A third accomplishment or responsibility",
+      "Built an AWS data pipeline using TypeScript, Lambda, S3, and Redshift Serverless to normalize billing data to FOCUS 1.2, stage Parquet files in S3, and load into Redshift, enabling faster cloud cost analytics.",
+      "Migrated functionality from Jira and an in-house portal into Salesforce, collaborating in an Agile team to build Lightning Web Components and Apex services that cut dashboard load times by ~25% for customers.",
+      "Designed and implemented an automated Salesforce case assignment workflow using Apex triggers and handler patterns to update status, enforce ownership rules, and notify external systems via webhooks.",
     ],
   },
   {
@@ -57,7 +57,7 @@ export function Experience() {
               <p className="text-xs sm:text-sm text-muted-foreground">
                 {exp.date}
               </p>
-              <ul className="mt-2 list-disc list-inside text-sm sm:text-base text-foreground space-y-1">
+              <ul className="mt-2 list-disc list-outside pl-5 text-sm sm:text-base text-foreground space-y-2">
                 {exp.bullets.map((bullet, i) => (
                   <li key={i}>{bullet}</li>
                 ))}

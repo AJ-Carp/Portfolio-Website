@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <div className={`${jetbrainsMono.className} w-full max-w-4xl px-6 py-16 md:py-24 text-foreground`}>
+    <div id="contact" className={`${jetbrainsMono.className} w-full max-w-4xl px-6 py-16 md:py-24 text-foreground`}>
       <div className="mx-auto text-center">
         <h2 className={` text-4xl md:text-6xl font-bold mb-6`}>
           <Mail className="inline-block mr-2" /> Contact Me

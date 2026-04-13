@@ -56,8 +56,8 @@ export default function ProjectModal({
       onClick={onClose}
     >
       <Tilt
-        tiltMaxAngleX={10}
-        tiltMaxAngleY={10}
+        tiltMaxAngleX={4}
+        tiltMaxAngleY={4}
         glareEnable={false}
         className="relative w-full max-w-3xl rounded-xl overflow-hidden group transition-all duration-300"
         style={{
