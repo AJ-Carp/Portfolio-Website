@@ -13,10 +13,8 @@ export default function HomePage() {
       <Home/>
       <Experience/>
       <Projects/>
-      <div id="skills-contact">
-        <SkillsSection/>
-        <Contact/>
-      </div>
+      <SkillsSection/>
+      <Contact/>
       <Footer/>
     </main>
   );

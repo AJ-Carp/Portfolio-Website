@@ -8,8 +8,8 @@ const navItems = [
   { name: "Home", url: "#home", icon: Home },
   { name: "Experience", url: "#experience", icon: Building2 },
   { name: "Projects", url: "#projects", icon: Briefcase },
-  { name: "Skills", url: "#skills-contact", icon: Wrench },
-  { name: "Contact", url: "#skills-contact", icon: Contact },
+  { name: "Skills", url: "#skills", icon: Wrench },
+  { name: "Contact", url: "#contact", icon: Contact },
 ];
 
 export function Navbar() {
