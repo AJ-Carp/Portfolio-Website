@@ -1,7 +1,7 @@
 "use client";
-import { FaGitAlt, FaGithub, FaReact } from "react-icons/fa6";
+import { FaAws, FaDocker, FaGitAlt, FaGithub, FaReact } from "react-icons/fa6";
 import { RiCss3Fill, RiHtml5Fill, RiTailwindCssFill } from "react-icons/ri";
-import { SiMongodb, SiNodedotjs, SiSpringboot, SiTypescript } from "react-icons/si";
+import { SiMongodb, SiNodedotjs, SiPostgresql, SiSpringboot, SiTypescript } from "react-icons/si";
 import { FaPython } from "react-icons/fa6";
 import { FaJava } from "react-icons/fa6";
 import SkillCard from "../SkillCard";
@@ -20,8 +20,11 @@ const skills = [
     { name: "Python", icon: <FaPython />, hoverColor: "group-hover:text-yellow-300" },
     { name: "Node.js", icon: <SiNodedotjs />, hoverColor: "group-hover:text-green-600" },
     { name: "MongoDB", icon: <SiMongodb />, hoverColor: "group-hover:text-green-500" },
+    { name: "PostgreSQL", icon: <SiPostgresql />, hoverColor: "group-hover:text-sky-500" },
     { name: "Java", icon: <FaJava />, hoverColor: "group-hover:text-red-500" },
     { name: "Spring Boot", icon: <SiSpringboot />, hoverColor: "group-hover:text-green-500" },
+    { name: "Docker", icon: <FaDocker />, hoverColor: "group-hover:text-blue-400" },
+    { name: "AWS", icon: <FaAws />, hoverColor: "group-hover:text-orange-400" },
 ];
 
 export default function SkillsSection() {

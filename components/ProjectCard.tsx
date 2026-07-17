@@ -8,6 +8,8 @@ interface ProjectCardProps {
     thumbnail: string;
     techStack: string[];
     gradient: string;
+    /** Pixels to push the thumbnail down past the card's bottom edge. */
+    thumbnailOffsetY?: number;
     onClick?: () => void;
 }
 
@@ -17,6 +19,7 @@ export default function ProjectCard({
     thumbnail,
     techStack,
     gradient,
+    thumbnailOffsetY = 25,
     onClick,
 }: ProjectCardProps) {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -78,15 +81,20 @@ export default function ProjectCard({
 
             </div>
 
-            {/* Thumbnail */}
-            <div className="relative bottom-[-50px] w-full flex justify-center items-end z-10 max-h-[180px] sm:max-h-[300px] md:max-h-none">
-                <Image
-                    src={thumbnail}
-                    alt="project"
-                    width={400}
-                    height={300}
-                    className="duration-500 group-hover:-translate-y-4 object-contain rounded-t-2xl w-[80%]"
-                />
+            {/* Thumbnail — fixed height so every card matches, with or without an image */}
+            <div
+                className="relative w-full flex justify-center items-end z-10 h-[180px] sm:h-[300px] md:h-[390px]"
+                style={{ bottom: -thumbnailOffsetY }}
+            >
+                {thumbnail && (
+                    <Image
+                        src={thumbnail}
+                        alt="project"
+                        width={900}
+                        height={500}
+                        className="duration-500 group-hover:-translate-y-4 object-contain rounded-t-2xl w-[80%] max-h-full"
+                    />
+                )}
             </div>
         </div>
     );

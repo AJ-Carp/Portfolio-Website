@@ -56,8 +56,8 @@ export default function ProjectModal({
       onClick={onClose}
     >
       <Tilt
-        tiltMaxAngleX={3}
-        tiltMaxAngleY={3}
+        tiltMaxAngleX={2}
+        tiltMaxAngleY={2}
         glareEnable={false}
         transitionSpeed={2000}
         className="relative w-full max-w-3xl rounded-xl overflow-hidden group transition-all duration-300"
@@ -94,29 +94,33 @@ export default function ProjectModal({
           {/* Links & Tech Stack */}
           <div className="flex flex-col md:flex-row items-center justify-between mt-4 gap-4">
             <div className="flex flex-wrap justify-center sm:justify-start gap-3">
-              <a
-                href={live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-black font-semibold px-4 py-2 rounded-3xl hover:opacity-80 transition"
-              >
-                <ExternalLink size={18} /> Live Preview
-              </a>
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-black font-semibold px-4 py-2 rounded-3xl hover:opacity-80 transition"
-              >
-                <FiGithub size={18} /> GitHub
-              </a>
+              {live && (
+                <a
+                  href={live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-black font-semibold px-4 py-2 rounded-3xl hover:opacity-80 transition"
+                >
+                  <ExternalLink size={18} /> Live Preview
+                </a>
+              )}
+              {github && (
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-black font-semibold px-4 py-2 rounded-3xl hover:opacity-80 transition"
+                >
+                  <FiGithub size={18} /> GitHub
+                </a>
+              )}
             </div>
 
             <div className="flex justify-center md:justify-end transition-all duration-500">
               {techStack.map((tech, index) => (
                 <div
                   key={index}
-                  className={`w-12 h-12 rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center text-[24px] sm:text-[28px] shadow-md transition-all duration-500`}
+                  className={`w-12 h-12 rounded-full bg-neutral-900 flex items-center justify-center text-[24px] sm:text-[28px] shadow-md transition-all duration-500`}
                   style={{ zIndex: techStack.length - index }}
                 >
                   {techIconMap[tech] || null}

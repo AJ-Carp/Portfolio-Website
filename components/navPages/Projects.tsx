@@ -24,22 +24,23 @@ export const techIconMap: Record<string, JSX.Element> = {
 
 const projects = [
   {
+    title: "Smart Merge",
+    description: "AI code review that comments right on your PR",
+    thumbnail: "/smartmerge_logo_stacked.png",
+    thumbnailOffsetY: 45,
+    techStack: ["react", "spring boot", "postgresql"],
+    gradient: "#bbaaff, #a9aaae",
+    github: "https://github.com/AJ-Carp/Smart-Merge",
+    live: "",
+  },
+  {
     title: "PERN Merch",
     description: "An website built to sell my band's merch",
-    thumbnail: "/pern-merch-homepage.png",
+    thumbnail: "/pernmerch-home.png",
     techStack: ["react", "spring boot", "postgresql", "stripe", "docker", "aws"],
     gradient: "#7a0909, rgb(0, 0, 0)",
     github: "https://github.com/AJ-Carp/Pern-Merch",
     live: "https://pernmerch.com/",
-  },
-  {
-    title: "Smart Merge",
-    description: "AI code review that comments right on your PR",
-    thumbnail: "",
-    techStack: [""],
-    gradient: "#bbaaff, #a9aaae",
-    github: "",
-    live: "",
   },
   {
     title: "",

@@ -15,12 +15,7 @@ export function Home() {
     const [isWaving, setIsWaving] = useState(false);
 
     const handleOpenResume = () => {
-        const resumeUrl = '/resume.pdf';
-        const newWindow = window.open(resumeUrl, '_blank', 'noopener,noreferrer');
-
-        if (!newWindow) {
-            window.location.href = resumeUrl;
-        }
+        window.open('/resume.pdf', '_blank', 'noopener,noreferrer');
     };
     
 
