@@ -3,6 +3,8 @@ import React, { JSX, useState } from "react";
 import ProjectCard from "../ProjectCard";
 import ProjectModal from "../ProjectModal"; // ⬅️ You must have this file
 import { jetbrainsMono } from "@/app/font";
+import smartMergeLogo from "@/public/smartmerge_logo_stacked.png";
+import pernMerchHome from "@/public/pernmerch-home.png";
 
 import { FaReact, FaNodeJs, FaAws, FaDocker } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTypescript, SiNextdotjs, SiPostgresql, SiSpring, SiStripe } from "react-icons/si";
@@ -26,7 +28,7 @@ const projects = [
   {
     title: "Smart Merge",
     description: "AI code review that comments right on your PR",
-    thumbnail: "/smartmerge_logo_stacked.png",
+    thumbnail: smartMergeLogo,
     thumbnailOffsetY: 45,
     techStack: ["react", "spring boot", "postgresql"],
     gradient: "#bbaaff, #a9aaae",
@@ -36,7 +38,7 @@ const projects = [
   {
     title: "PERN Merch",
     description: "An website built to sell my band's merch",
-    thumbnail: "/pernmerch-home.png",
+    thumbnail: pernMerchHome,
     techStack: ["react", "spring boot", "postgresql", "stripe", "docker", "aws"],
     gradient: "#7a0909, rgb(0, 0, 0)",
     github: "https://github.com/AJ-Carp/Pern-Merch",

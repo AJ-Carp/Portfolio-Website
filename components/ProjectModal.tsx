@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useState } from "react";
 import { jetbrainsMono } from "@/app/font";
 import { X, ExternalLink } from "lucide-react";
@@ -10,7 +10,7 @@ import { techIconMap } from "./navPages/Projects";
 interface ProjectModalProps {
   title: string;
   description: string;
-  thumbnail: string;
+  thumbnail: string | StaticImageData;
   techStack: string[];
   gradient: string;
   github: string;

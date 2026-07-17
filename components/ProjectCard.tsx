@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useState } from "react";
 import { techIconMap } from "./navPages/Projects";
 
 interface ProjectCardProps {
     title: string;
     description: string;
-    thumbnail: string;
+    thumbnail: string | StaticImageData;
     techStack: string[];
     gradient: string;
     /** Pixels to push the thumbnail down past the card's bottom edge. */
