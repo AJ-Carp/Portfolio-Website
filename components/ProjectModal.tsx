@@ -82,14 +82,16 @@ export default function ProjectModal({
           <p className="text-sm sm:text-base text-white/80">{description}</p>
 
           {/* Image */}
-          <div className="relative w-full min-h-[200px] sm:min-h-[420px] flex justify-center rounded-2xl">
-            <Image
-              src={thumbnail}
-              alt="project"
-              fill
-              className="rounded-2xl w-[90%] sm:w-[80%] md:w-[400px]"
-            />
-          </div>
+          {thumbnail && (
+            <div className="relative w-full min-h-[200px] sm:min-h-[420px] flex justify-center rounded-2xl">
+              <Image
+                src={thumbnail}
+                alt="project"
+                fill
+                className="rounded-2xl w-[90%] sm:w-[80%] md:w-[400px]"
+              />
+            </div>
+          )}
 
           {/* Links & Tech Stack */}
           <div className="flex flex-col md:flex-row items-center justify-between mt-4 gap-4">
