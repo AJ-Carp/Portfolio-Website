@@ -43,15 +43,6 @@ const projects = [
     gradient: "#7a0909, rgb(0, 0, 0)",
     github: "https://github.com/AJ-Carp/Pern-Merch",
     live: "https://pernmerch.com/",
-  },
-  {
-    title: "",
-    description: "",
-    thumbnail: "",
-    techStack: [""],
-    gradient: "#14f195, rgb(13, 1, 60)",
-    github: "",
-    live: "",
   }
 ];
 
