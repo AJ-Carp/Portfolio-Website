@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useTheme } from "next-themes";
 import { techIconMap } from "./navPages/Projects";
 
 interface ProjectCardProps {
@@ -22,19 +23,14 @@ export default function ProjectCard({
     thumbnailOffsetY = 25,
     onClick,
 }: ProjectCardProps) {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
-        }
-    }, []);
+    const { resolvedTheme } = useTheme();
+    const isDarkMode = resolvedTheme === "dark";
 
     const lightShadow = {
         boxShadow: `
-      rgba(0, 0, 0, 0.5) 0px 15px 25px,
-      rgba(0, 0, 0, 0.35) 0px 10px 15px,
-      rgba(0, 0, 0, 0.25) 0px 4px 6px
+      rgba(0, 0, 0, 0.1) 0px 15px 25px,
+      rgba(0, 0, 0, 0.07) 0px 10px 15px,
+      rgba(0, 0, 0, 0.04) 0px 4px 6px
     `,
     };
 
@@ -50,7 +46,7 @@ export default function ProjectCard({
             onClick={onClick}
             className="relative cursor-pointer border-[10px] border-slate-900 rounded-xl overflow-hidden group transition-all duration-300"
             style={{
-                ...(isDarkMode ? lightShadow : darkShadow),
+                ...(isDarkMode ? darkShadow : lightShadow),
                 background: `radial-gradient(circle at 50% 0%, ${gradient})`,
             }}
         >

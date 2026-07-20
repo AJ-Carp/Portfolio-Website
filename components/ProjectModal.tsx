@@ -1,6 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useTheme } from "next-themes";
 import { jetbrainsMono } from "@/app/font";
 import { X, ExternalLink } from "lucide-react";
 import { FiGithub } from "react-icons/fi";
@@ -28,18 +29,13 @@ export default function ProjectModal({
   live,
   onClose,
 }: ProjectModalProps) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
-    }
-  }, []);
+  const { resolvedTheme } = useTheme();
+  const isDarkMode = resolvedTheme === "dark";
 
   const lightShadow = {
     boxShadow: `
-      rgba(0, 0, 0, 0.5) 0px 20px 30px,
-      rgba(0, 0, 0, 0.4) 0px 12px 18px
+      rgba(0, 0, 0, 0.14) 0px 20px 30px,
+      rgba(0, 0, 0, 0.1) 0px 12px 18px
     `,
   };
 
@@ -62,7 +58,7 @@ export default function ProjectModal({
         transitionSpeed={2000}
         className="relative w-full max-w-3xl rounded-xl overflow-hidden group transition-all duration-300"
         style={{
-          ...(isDarkMode ? lightShadow : darkShadow),
+          ...(isDarkMode ? darkShadow : lightShadow),
           background: `radial-gradient(circle at 50% 0%, ${gradient})`,
         }}
       >
