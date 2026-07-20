@@ -15,7 +15,7 @@ export function Home() {
     const [isWaving, setIsWaving] = useState(false);
 
     const handleOpenResume = () => {
-        window.open('/resume.pdf', '_blank', 'noopener,noreferrer');
+        window.open('/Anthony-Carpinello-resume.pdf', '_blank', 'noopener,noreferrer');
     };
     
 
