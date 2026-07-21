@@ -88,7 +88,7 @@ export default function ProjectCard({
                         alt="project"
                         width={900}
                         height={500}
-                        className="duration-500 group-hover:-translate-y-4 object-contain rounded-t-2xl w-[80%] max-h-full"
+                        className="duration-500 group-hover:-translate-y-4 object-contain rounded-2xl w-[80%] max-h-full"
                     />
                 )}
             </div>
