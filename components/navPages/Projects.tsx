@@ -53,15 +53,6 @@ const projects = [
     live: "https://pernmerch.com/",
   },
   {
-    title: "Notation Converter",
-    description: "An expression converter that visualizes binary trees",
-    thumbnail: mathAlien,
-    techStack: ["html", "css", "javascript"],
-    gradient: "rgb(111, 180, 123), rgb(44, 28, 70)",
-    github: "https://github.com/AJ-Carp/NotationConverter",
-    live: "https://aj-carp.github.io/NotationConverter/",
-  },
-  {
     title: "Funds and Layoffs",
     description: "A SQL and Tableau dive into company layoffs and funding",
     thumbnail: fundsLayoffs,
@@ -70,6 +61,15 @@ const projects = [
     gradient: "rgb(11, 65, 130), rgb(0, 255, 195)",
     github: "https://github.com/AJ-Carp/Funds-and-Layoffs-Project",
     live: "",
+  },
+  {
+    title: "Notation Converter",
+    description: "An expression converter that visualizes binary trees",
+    thumbnail: mathAlien,
+    techStack: ["html", "css", "javascript"],
+    gradient: "rgb(111, 180, 123), rgb(44, 28, 70)",
+    github: "https://github.com/AJ-Carp/NotationConverter",
+    live: "https://aj-carp.github.io/NotationConverter/",
   }
 ];
 
