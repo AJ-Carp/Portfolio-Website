@@ -17,10 +17,10 @@ const experiences = [
     ],
   },
   {
-    title: "Front-End Engineer & Vice President",
+    title: "Vice President & Front-End Engineer",
     company: "Computer Science and AI Club",
     location: "West Windsor, New Jersey",
-    date: "July 2025 – May 2026",
+    date: "May 2025 – May 2026",
     bullets: [
       "Designed and facilitated a hands-on workshop teaching 20 students to leverage AI tools to build and ship personal portfolio websites from scratch, achieving a 100% success rate with each student building a fully deployed site.",
       "Engineered and maintained the CS Club’s website using HTML, CSS, and JavaScript, collaborating with student engineers to design new features and improve overall functionality for 50+ student members.",
