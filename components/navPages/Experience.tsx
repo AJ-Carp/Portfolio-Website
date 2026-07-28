@@ -11,9 +11,9 @@ const experiences = [
     location: "Remote",
     date: "January 2026 – March 2026",
     bullets: [
-      "Built an AWS pipeline (TypeScript, Lambda, S3, Redshift Serverless) to normalize cloud billing data to FOCUS 1.2, stage it as Parquet in S3, and load it into Redshift, replacing a paid vendor and cutting recurring subscription costs.",
-      "Migrated client ticketing and cloud-spend visibility from Jira and a legacy portal into a Salesforce Digital Experience site, building Lightning Web Components and Apex services, cutting dashboard load times by ~25%.",
-      "Designed and implemented an automated Salesforce ticket (Case) management workflow using Apex triggers and handler patterns to track ownership changes, update status in real time, and send client notifications on updates.",
+      "Developed an AWS pipeline using TypeScript and Lambda to normalize client billing data and load it into an Amazon Redshift data warehouse, replacing a paid vendor and cutting the team's tooling costs by 15%.",
+      "Engineered a Salesforce portal with Lightning Web Components and Apex services, replacing a legacy client dashboard and giving clients real-time visibility into cloud-spend data while cutting load times by ~50%.",
+      "Built a ticket management system within the Salesforce portal using Apex triggers and handler patterns, allowing clients to submit requests and replacing a manual process where employees logged tickets in Jira.",
     ],
   },
   {
