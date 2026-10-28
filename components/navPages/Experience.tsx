@@ -11,7 +11,7 @@ const experiences = [
     location: "Remote",
     date: "January 2026 – March 2026",
     bullets: [
-      "Developed an AWS pipeline using TypeScript and Lambda to normalize client billing data and load it into an Amazon Redshift data warehouse, replacing a paid vendor and cutting the team's tooling costs by 15%.",
+      "Developed an ETL pipeline using TypeScript and AWS Lambda to normalize client billing data and load it into an Amazon Redshift data warehouse, replacing a paid vendor and cutting the team’s tooling costs by 15%.",
       "Engineered a Salesforce portal with Lightning Web Components and Apex services, replacing a legacy client dashboard and giving clients real-time visibility into cloud-spend data while cutting load times by ~50%.",
       "Built a ticket management system within the Salesforce portal using Apex triggers and handler patterns, allowing clients to submit requests and replacing a manual process where employees logged tickets in Jira.",
     ],
